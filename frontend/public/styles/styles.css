@@ -8,7 +8,7 @@
   --background2_color: #D12E2D;
   --gallery_img_ratio: calc(16/9);
   --gallery_img_width_m: 80vw;
-  --gallery_img_width_t: 24rem;
+  --gallery_img_width_t: 20rem;
   --gallery_img_width_d: 25rem;
 }
 
@@ -24,6 +24,7 @@ a {
 
 body {
   background-color: var(--background1_color);
+  min-height: 100dvh;
 }
 
 .back_button_div {
@@ -340,9 +341,14 @@ body {
 }
 
 .gallery {
-  display: block; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
 }
 .gallery header {
+  flex: 0 1 25%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -388,6 +394,8 @@ body {
   background-color: var(--accent_color);
 }
 .gallery .gallery_imgs {
+  flex: 10 0 75%;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -525,7 +533,11 @@ body {
   .event_card video {
     width: 10rem;
   }
+  .gallery main {
+    min-height: 100dvh;
+  }
   .gallery .gallery_imgs {
+    flex: 10 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;

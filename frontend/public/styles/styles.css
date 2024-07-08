@@ -318,13 +318,17 @@ body {
   position: fixed;
 }
 
+.events #upcoming_events > * {
+  margin: 10px 0;
+}
+
+
 .events .event_description {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   position: fixed;
+}
+.events .event_description > * {
+  margin: 2.5vw 0;
 }
 
 .events img,
@@ -452,6 +456,13 @@ body {
   }
   .event_cards {
     grid-template-columns: repeat(2, 1fr);
+    
+  }
+  .events .future_events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .gallery header {
     padding: 2vw;
@@ -477,6 +488,13 @@ body {
     width: var(--gallery_img_width_t);
     border-radius: 4rem;
   }
+  .events #upcoming_events {
+    position: static;
+  }
+  
+  .events .event_description {
+    position: static
+  }
 }
 
 @media only screen and (min-width:1024px) {
@@ -486,6 +504,22 @@ body {
   .home .gallery_photos img {
     width: auto;
     height: 65vh;
+  }
+  .events .future_events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .event_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .event_card {
+    max-width: 10.5rem;
+  }
+  .event_card img,
+  .event_card video {
+    width: 10rem;
   }
   .gallery .gallery_imgs {
     display: grid;

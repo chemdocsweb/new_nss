@@ -119,14 +119,14 @@ function description(element) {
   var upcoming_events = document.getElementById('upcoming_events');
   descriptions.forEach(description => { description.style.display = 'none'; });
   if (upcoming_events.style.display === "block") {
-    clicked_description.style.display = 'flex';
+    clicked_description.style.display = 'block';
     upcoming_events.style.display = 'none';
   } else {
     // upcoming_events.style.display === 'none';
     if (description_id === prev_description_id) {
       upcoming_events.style.display = 'block';
     } else {
-      clicked_description.style.display = 'flex';
+      clicked_description.style.display = 'block';
     }
   }
     prev_description_id = description_id;
